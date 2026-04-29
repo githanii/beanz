@@ -49,7 +49,7 @@
                         <label class="form-label">Password</label>
                         <input type="password" name="password" class="form-control" required>
                     </div>
-                    <button class="btn btn-dark w-100">Register</button>
+                    <button class="btn btn-dark w-100">sign up</button>
                 </form>
                 <p class="text-center mt-3 small">Already have an account?
                     <a href="login.php">Login</a>
