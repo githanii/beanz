@@ -1,0 +1,15 @@
+/* Beanz custom styles */
+body {
+    background-color:  hsl(19, 68%, 35%);
+}
+
+.navbar-brand {
+    font-size: 1.4rem;
+    color: hsl(19, 77%, 44%) !important;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+}
