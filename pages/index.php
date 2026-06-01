@@ -32,7 +32,7 @@ $shops = $stmt->fetchAll(PDO::FETCH_ASSOC);
             </div>
         </div> <?php endforeach; ?> </div> <?php require_once '../includes/footer.php'; ?>
     
-</body>
+</body> 
 </html>
 
 
