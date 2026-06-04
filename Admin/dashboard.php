@@ -1,11 +1,13 @@
-<?php require_once 'guard.php';
+<?php
+require_once 'guard.php';
 require_once '../config/db.php';
 require_once 'header.php';
 $total_shops = $pdo->query("SELECT COUNT(*) FROM shops")->fetchColumn();
 $total_products = $pdo->query("SELECT COUNT(*) FROM products")->fetchColumn();
 $total_orders = $pdo->query("SELECT COUNT(*) FROM orders")->fetchColumn();
 $total_revenue = $pdo->query("SELECT SUM(total) FROM orders")->fetchColumn() ?? 0;
-?> <h4 class="mb-4">Dashboard</h4>
+?>
+<h4 class="mb-4">Dashboard</h4>
 <div class="row g-3 mb-5">
     <div class="col-md-3">
         <div class="card text-center p-3">

@@ -11,15 +11,21 @@
         $stmt->execute([$email]);
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
         if ($user && password_verify($pass, $user['password'])) {
-            $_SESSION['user_id'] = $user['id'];
-            $_SESSION['user_name'] = $user['name'];
-            $_SESSION['user_role'] = $user['role'];
-            header('Location: index.php');
-            exit;
+    $_SESSION['user_id']   = $user['id'];
+    $_SESSION['user_name'] = $user['name'];
+    $_SESSION['user_role'] = $user['role'];
+    
+    if ($user['role'] === 'admin') {
+        header('Location: ../admin/dashboard.php');
+    } else {
+        header('Location: index.php');
+    }
+    exit;
+}
         } else {
             $error = 'Wrong email or password.';
         }
-    } ?> <div class="row justify-content-center">
+    ?> <div class="row justify-content-center">
         <div class="col-md-5">
             <div class="card p-4">
                 <h4 class="mb-3">Login</h4> <?php if ($error): ?> <div class="alert alert-danger"><?php echo $error; ?></div> <?php endif; ?> <form method="POST">

@@ -1,4 +1,3 @@
-<?php require_once 'guard.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 
