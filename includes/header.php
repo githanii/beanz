@@ -1,4 +1,9 @@
-<?php session_start(); ?>
+<?php 
+require_once '../config/session.php';
+session_start();
+ ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +17,7 @@
 
 <body>
     <nav class="navbar navbar-expand-lg bg-white border-bottom">
-        <div class="container"> 
+        <div class="container">
             <a class="navbar-brand fw-bold" href="/finalphpproject/pages/index.php">Beanz</a>
             <div class="ms-auto d-flex gap-2">
                 <?php if (isset($_SESSION['user_id'])): ?>

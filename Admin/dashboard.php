@@ -38,4 +38,6 @@ $total_revenue = $pdo->query("SELECT SUM(total) FROM orders")->fetchColumn() ?? 
         </div>
     </div>
 </div>
-<div class="d-flex gap-3"> <a href="shops.php" class="btn btn-dark">Manage Shops</a> <a href="orders.php" class="btn btn-outline-dark">View Orders</a> </div> <?php require_once '../includes/footer.php'; ?>
+<div class="d-flex gap-3"> <a href="shops.php" class="btn btn-dark">Manage Shops</a>
+    <a href="orders.php" class="btn btn-outline-dark">View Orders</a>
+</div> <?php require_once '../includes/footer.php'; ?>
