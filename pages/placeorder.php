@@ -21,6 +21,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     foreach ($cart as $product_id => $item) {
         $item_stmt->execute([$order_id, $product_id, $item['quantity'], $item['price']]);
     }
+
+    if (!empty($_POST['add_sticker'])) {
+        $_SESSION['sticker_order_id'] = $order_id;
+        unset($_SESSION['cart']);
+        header('Location: sticker.php');
+        exit;
+    }
     unset($_SESSION['cart']);
     header('Location: confirmation.php?order_id=' . $order_id);
     exit;

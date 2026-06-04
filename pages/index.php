@@ -1,12 +1,4 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
 <?php
 require_once '../config/db.php';
 require_once '../includes/header.php';
@@ -30,10 +22,9 @@ $shops = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     "class="btn btn-dark btn-sm w-100">View Shop</a>
                 </div>
             </div>
-        </div> <?php endforeach; ?> </div> <?php require_once '../includes/footer.php'; ?>
+        </div> <?php endforeach; ?> </div> 
+        <?php require_once '../includes/footer.php'; ?>
     
-</body> 
-</html>
 
 
 
