@@ -47,7 +47,7 @@ foreach ($cart as $item) {
                 
             </form>
         </div>
-    </div> <!-- RIGHT: Order summary -->
+    </div>
     <div class="col-md-5">
         <div class="card p-4">
             <h5 class="mb-3">Order Summary</h5>
