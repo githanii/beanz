@@ -1,15 +1,40 @@
-/* Beanz custom styles */
 body {
-    background-color:  hsl(19, 68%, 35%);
+    background-color: #fdf8f2;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .navbar-brand {
-    font-size: 1.4rem;
-    color: hsl(19, 77%, 44%) !important;
+    font-size: 1.5rem;
+    color: #c4511a !important;
+    font-weight: 700;
 }
 
 .card {
     border: none;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+}
+
+.btn-dark {
+    background-color: #333;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-dark:hover {
+    background-color: #c4511a;
+    transform: scale(1.05);
+}
+
+.badge {
+    font-size: 0.8rem;
+    padding: 0.5rem 0.75rem;
+}
+
+html {
+    scroll-behavior: smooth;
 }
