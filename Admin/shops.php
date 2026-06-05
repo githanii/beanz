@@ -31,7 +31,8 @@ $shops = $pdo->query("SELECT * FROM shops ORDER BY id DESC")->fetchAll(PDO::FETC
 </div>
 <div id="addForm" class="card p-4 mb-4 d-none">
     <h6><?php echo $editing ? 'Edit Shop' : 'Add New Shop'; ?></h6>
-    <form method="POST"> <input type="hidden" name="action" value="<?php echo $editing ? 'edit' : 'add'; ?>"> <?php if ($editing): ?> <input type="hidden" name="id" value="<?php echo $editing['id']; ?>">
+    <form method="POST"> 
+        <input type="hidden" name="action" value="<?php echo $editing ? 'edit' : 'add'; ?>"> <?php if ($editing): ?> <input type="hidden" name="id" value="<?php echo $editing['id']; ?>">
         <?php endif; ?>
         <div class="row g-3">
             <div class="col-md-3">
@@ -49,7 +50,7 @@ $shops = $pdo->query("SELECT * FROM shops ORDER BY id DESC")->fetchAll(PDO::FETC
             <div class="col-md-2"> <button class="btn btn-dark w-100"> <?php echo $editing ? 'Save' : 'Add'; ?> </button> </div>
         </div>
     </form>
-</div> >
+</div> 
 <div class="card">
     <table class="table table-hover mb-0">
         <thead class="table-dark">
@@ -66,10 +67,12 @@ $shops = $pdo->query("SELECT * FROM shops ORDER BY id DESC")->fetchAll(PDO::FETC
                     <td><?php echo htmlspecialchars($shop['name']); ?></td>
                     <td><?php echo $shop['category']; ?></td>
                     <td><?php echo htmlspecialchars($shop['city']); ?></td>
-                    <td> <a href="shops.php?edit=<?php echo $shop['id']; ?>" class="btn btn-sm btn-outline-dark">Edit</a> <a href="shops.php?delete=<?php echo $shop['id']; ?>" class="btn btn-sm btn-outline-danger" onclick="return confirm('Delete this shop?')">Delete</a> </td>
+                    <td> <a href="shops.php?edit=<?php echo $shop['id']; ?>" class="btn btn-sm btn-outline-dark">Edit</a>
+                     <a href="shops.php?delete=<?php echo $shop['id']; ?>" class="btn btn-sm btn-outline-danger" onclick="return confirm('Delete this shop?')">Delete</a> </td>
                 </tr> <?php endforeach; ?> </tbody>
     </table>
 </div> 
-<?php if ($editing): ?> <script>
+<?php if ($editing): ?> 
+<script>
         document.getElementById('addForm').classList.remove('d-none');
     </script> <?php endif; ?> <?php require_once '../includes/footer.php'; ?>

@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (!in_array($template, $allowed)) {
         $template = 'birthday';
     }
-    $preview_img = '/finalphpproject/assets/images/stickers/' . $template . '.png';
+    $preview_img = '/finalphpproject/images/' . $template . '.png';
     $stmt = $pdo->prepare(" INSERT INTO sticker_designs (order_id, template, custom_text, preview_img) VALUES (?, ?, ?, ?) ");
     $stmt->execute([$order_id, $template, $custom_text, $preview_img]);
     unset($_SESSION['sticker_order_id']);

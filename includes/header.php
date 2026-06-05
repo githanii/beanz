@@ -11,7 +11,7 @@ require_once '../config/session.php';
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Beanz</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/finalphpproject/assests/css/style.css">
+    <link rel="stylesheet" href="../assests/css/style.css">
 </head>
 
 <body>

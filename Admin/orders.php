@@ -16,14 +16,18 @@ $orders = $pdo->query(" SELECT o.*, u.name AS customer_name FROM orders o JOIN u
                 <th></th>
             </tr>
         </thead>
-        <tbody> <?php foreach ($orders as $order): ?> <tr>
+        <tbody> 
+            <?php foreach ($orders as $order): ?> <tr>
                     <td><?php echo $order['id']; ?></td>
                     <td><?php echo htmlspecialchars($order['customer_name']); ?></td>
                     <td><?php echo htmlspecialchars($order['recipient_name']); ?></td>
                     <td>$<?php echo number_format($order['total'], 2); ?></td>
                     <td><?php echo date('M d, Y', strtotime($order['created_at'])); ?></td>
                     <td> <?php $badges = ['pending' => 'warning text-dark', 'confirmed' => 'primary', 'delivered' => 'success'];
-                            $b = $badges[$order['status']] ?? 'secondary'; ?> <span class="badge bg-<?php echo $b; ?>"> <?php echo ucfirst($order['status']); ?> </span> </td>
+                            $b = $badges[$order['status']] ?? 'secondary'; ?> 
+                            <span class="badge bg-<?php echo $b; ?>">
+                             <?php echo ucfirst($order['status']); ?>
+                             </span> </td>
                     <td> <a href="update_order.php?id=<?php echo $order['id']; ?>" class="btn btn-sm btn-outline-dark">Update</a> </td>
                 </tr> <?php endforeach; ?> </tbody>
     </table>
